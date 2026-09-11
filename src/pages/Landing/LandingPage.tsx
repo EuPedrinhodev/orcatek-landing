@@ -11,9 +11,9 @@ function LandingPage() {
   return (
     <div className="landing">
       {/* =====================================================
-          NAVBAR
-      ===================================================== */}
-
+NAVBAR
+===================================================== */}
+      ```
       <header className="landing-header">
         <div className="landing-container nav-content">
           <a href="#" className="logo">
@@ -29,17 +29,20 @@ function LandingPage() {
           </nav>
 
           <div className="nav-actions">
+            <a href="/app/" className="btn-ghost">
+              Acessar OrçaTek
+            </a>
+
             <a href="#planos" className="btn-primary">
               Começar teste grátis
             </a>
           </div>
         </div>
       </header>
-
       <main>
         {/* =====================================================
-            HERO
-        ===================================================== */}
+        HERO
+    ===================================================== */}
 
         <section className="hero">
           <div className="hero-background-glow hero-glow-one"></div>
@@ -68,13 +71,8 @@ function LandingPage() {
                   <span>→</span>
                 </a>
 
-                <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-ghost btn-large"
-                >
-                  Falar com um especialista
+                <a href="/app/" className="btn-ghost btn-large">
+                  Acessar OrçaTek
                 </a>
               </div>
 
@@ -104,8 +102,8 @@ function LandingPage() {
             </div>
 
             {/* =================================================
-                DASHBOARD
-            ================================================= */}
+            DASHBOARD
+        ================================================= */}
 
             <div className="dashboard-wrapper">
               <div className="dashboard-glow"></div>
@@ -246,8 +244,8 @@ function LandingPage() {
               </div>
 
               {/* =================================================
-                  CELULAR
-              ================================================= */}
+              CELULAR
+          ================================================= */}
 
               <div className="phone-mockup">
                 <div className="phone-notch"></div>
@@ -343,8 +341,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            DISPOSITIVOS
-        ===================================================== */}
+        DISPOSITIVOS
+    ===================================================== */}
 
         <section className="device-section">
           <div className="landing-container">
@@ -401,8 +399,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            RECURSOS
-        ===================================================== */}
+        RECURSOS
+    ===================================================== */}
 
         <section className="section" id="recursos">
           <div className="landing-container">
@@ -493,8 +491,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            COMO FUNCIONA
-        ===================================================== */}
+        COMO FUNCIONA
+    ===================================================== */}
 
         <section className="section section-dark" id="como-funciona">
           <div className="landing-container">
@@ -552,8 +550,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            AVALIAÇÕES GOOGLE
-        ===================================================== */}
+        AVALIAÇÕES GOOGLE
+    ===================================================== */}
 
         <section className="section reviews-section" id="avaliacoes">
           <div className="landing-container">
@@ -688,8 +686,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            MIGRAÇÃO
-        ===================================================== */}
+        MIGRAÇÃO
+    ===================================================== */}
 
         <section className="section" id="migracao">
           <div className="landing-container migration">
@@ -738,8 +736,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            PLANOS
-        ===================================================== */}
+        PLANOS
+    ===================================================== */}
 
         <section className="section pricing-section" id="planos">
           <div className="landing-container">
@@ -884,8 +882,8 @@ function LandingPage() {
         </section>
 
         {/* =====================================================
-            CTA FINAL
-        ===================================================== */}
+        CTA FINAL
+    ===================================================== */}
 
         <section className="final-cta">
           <div className="final-cta-glow"></div>
@@ -932,11 +930,9 @@ function LandingPage() {
           </div>
         </section>
       </main>
-
       {/* =====================================================
-          FOOTER
-      ===================================================== */}
-
+      FOOTER
+  ===================================================== */}
       <footer className="footer">
         <div className="landing-container footer-content">
           <div className="footer-brand">
