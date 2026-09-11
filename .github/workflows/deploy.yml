@@ -1,0 +1,39 @@
+name: Deploy Landing OrçaTek
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Locaweb
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.ORCATEK_HOST }}
+          username: ${{ secrets.ORCATEK_USER }}
+          key: ${{ secrets.ORCATEK_SSH_KEY }}
+          script: |
+            set -e
+
+            cd /var/www/orcatek-landing
+
+            echo "=== Atualizando código da landing ==="
+            git fetch origin main
+            git reset --hard origin/main
+
+            echo "=== Rebuild da landing ==="
+            cd /var/www/orcatek
+            docker compose build landing
+
+            echo "=== Atualizando container ==="
+            docker compose up -d landing
+
+            echo "=== Verificando landing ==="
+            docker compose ps landing
+
+            echo "=== DEPLOY LANDING CONCLUIDO ==="
