@@ -13,7 +13,7 @@ function LandingPage() {
       {/* =====================================================
 NAVBAR
 ===================================================== */}
-      ```
+
       <header className="landing-header">
         <div className="landing-container nav-content">
           <a href="#" className="logo">
