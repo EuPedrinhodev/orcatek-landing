@@ -7,6 +7,15 @@ const WHATSAPP =
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/search/?api=1&query=ORCATEK%2C%20Carapicu%C3%ADba%2C%20SP";
 
+function registrarLead() {
+  if (
+    typeof window !== "undefined" &&
+    typeof (window as any).fbq === "function"
+  ) {
+    (window as any).fbq("track", "Lead");
+  }
+}
+
 function LandingPage() {
   return (
     <div className="landing">
@@ -710,6 +719,7 @@ NAVBAR
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
+                onClick={registrarLead}
               >
                 Falar sobre migração
               </a>
@@ -785,6 +795,7 @@ NAVBAR
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline full-width"
+                  onClick={registrarLead}
                 >
                   Começar teste grátis
                 </a>
@@ -822,6 +833,7 @@ NAVBAR
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline full-width"
+                  onClick={registrarLead}
                 >
                   Começar teste grátis
                 </a>
@@ -861,6 +873,7 @@ NAVBAR
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary full-width"
+                  onClick={registrarLead}
                 >
                   Começar teste grátis
                 </a>
@@ -912,6 +925,7 @@ NAVBAR
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary btn-large"
+                  onClick={registrarLead}
                 >
                   Começar teste grátis
                   <span>→</span>
@@ -922,6 +936,7 @@ NAVBAR
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-final-whatsapp"
+                  onClick={registrarLead}
                 >
                   Falar no WhatsApp
                 </a>
